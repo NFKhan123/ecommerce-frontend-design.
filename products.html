@@ -19,15 +19,18 @@
                 
                 <form class="search-container" id="searchForm">
                     <input type="text" id="searchInput" placeholder="Search">
-                    <select>
-                        <option>All category</option>
+                    <select id="headerCategorySelect">
+                        <option value="All">All category</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Accessories">Mobile accessory</option>
+                        <option value="Computers">Computers</option>
                     </select>
                     <button type="submit" class="search-btn">Search</button>
                 </form>
                 
                 <div class="user-menu">
                     <div class="menu-item" onclick="window.location.href='index.html'"><i class="fa-regular fa-user"></i><span>Home</span></div>
-                    <div class="menu-item"><i class="fa-regular fa-comment-dots"></i><span>Message</span></div>
+                    <div class="menu-item" onclick="window.location.href='products.html'"><i class="fa-regular fa-comment-dots"></i><span>Shop</span></div>
                     <div class="menu-item"><i class="fa-regular fa-heart"></i><span>Orders</span></div>
                     <div class="menu-item" id="cartBtn">
                         <i class="fa-solid fa-cart-shopping"></i>
@@ -60,10 +63,10 @@
         <aside class="filter-sidebar">
             <div class="filter-group">
                 <h4>Category</h4>
-                <a href="#" class="active-filter">Electronics</a>
-                <a href="#">Mobile accessory</a>
-                <a href="#">Computers</a>
-                <a href="#">Smart Home</a>
+                <a href="#" class="category-filter-link active-filter" data-category="All">All Categories</a>
+                <a href="#" class="category-filter-link" data-category="Electronics">Electronics</a>
+                <a href="#" class="category-filter-link" data-category="Accessories">Mobile accessory</a>
+                <a href="#" class="category-filter-link" data-category="Computers">Computers</a>
             </div>
 
             <div class="filter-group">
@@ -72,14 +75,6 @@
                 <label><input type="checkbox"> Apple</label>
                 <label><input type="checkbox"> Huawei</label>
                 <label><input type="checkbox"> Sony</label>
-            </div>
-
-            <div class="filter-group">
-                <h4>Features</h4>
-                <label><input type="checkbox"> Metallic</label>
-                <label><input type="checkbox" checked> Plastic cover</label>
-                <label><input type="checkbox"> 8GB RAM</label>
-                <label><input type="checkbox"> Super AMOLED</label>
             </div>
 
             <div class="filter-group">
