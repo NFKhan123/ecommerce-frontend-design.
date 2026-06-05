@@ -1,0 +1,301 @@
+.hero-banner {
+    display: flex;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    margin-top: 20px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.hero-sidebar {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-sidebar a {
+    text-decoration: none;
+    color: var(--dark-text);
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.hero-sidebar a.active, .hero-sidebar a:hover {
+    background-color: #e5f1ff;
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+.hero-main-content {
+    flex: 1;
+    background: #f1f3f6 url('https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=800&auto=format&fit=crop&q=60') no-repeat right center;
+    background-size: cover;
+    padding: 60px 40px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-main-content h3 {
+    font-size: 22px;
+    color: var(--dark-text);
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.hero-main-content h1 {
+    font-size: 36px;
+    color: var(--dark-text);
+    margin-bottom: 20px;
+}
+/* --- SECTION 2: DEALS OF THE DAY LAYOUT --- */
+.deals-section {
+    display: flex;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.deals-countdown-box {
+    width: 250px;
+    padding: 20px;
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.deals-countdown-box h2 {
+    font-size: 20px;
+    color: var(--dark-text);
+    margin-bottom: 5px;
+}
+
+.deals-countdown-box p {
+    color: var(--gray-text);
+    font-size: 14px;
+}
+
+.timer-container {
+    display: flex;
+    gap: 6px;
+    margin-top: 15px;
+}
+
+.timer-block {
+    background-color: #606060;
+    color: var(--white);
+    border-radius: 4px;
+    width: 45px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer-block span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.timer-block small {
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+.deals-products-wrapper {
+    flex: 1;
+    display: flex;
+}
+
+.deal-item {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.deal-item:last-child {
+    border-right: none;
+}
+
+.deal-item:hover {
+    background-color: #fcfcfc;
+}
+
+.deal-item img {
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.deal-item h5 {
+    font-size: 14px;
+    color: var(--dark-text);
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.discount-badge {
+    background-color: #ffe5e5;
+    color: #eb001b;
+    padding: 4px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* --- SECTION 3: INTERIOR GRID BLOCK LAYOUT --- */
+.category-block {
+    display: flex;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.category-banner-side {
+    width: 250px;
+    background: #f1f3f6 url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=400&auto=format&fit=crop&q=60') no-repeat center center;
+    background-size: cover;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.category-banner-side h2 {
+    font-size: 20px;
+    color: var(--dark-text);
+    line-height: 1.3;
+}
+
+.btn-secondary-white {
+    background-color: var(--white);
+    color: var(--dark-text);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.category-grid-side {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.cat-cell {
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    cursor: pointer;
+    background-color: var(--white);
+    transition: background 0.2s ease;
+}
+
+.cat-cell:hover {
+    background-color: #f7f9fc;
+}
+
+.cat-cell-info h5 {
+    font-size: 14px;
+    color: var(--dark-text);
+    margin-bottom: 5px;
+}
+
+.cat-cell-info small {
+    color: var(--gray-text);
+    font-size: 12px;
+    display: inline-block;
+}
+
+.cat-cell img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    align-self: flex-end;
+}
+
+/* --- SECTION 4: RECOMMENDED 5-COLUMN GRID LAYOUT --- */
+.recommended-section {
+    margin-top: 10px;
+}
+
+.rec-title {
+    font-size: 20px;
+    color: var(--dark-text);
+    margin-bottom: 20px;
+}
+
+.recommended-5-col-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.rec-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rec-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+}
+
+.rec-img-holder {
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #fafafa;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.rec-img-holder img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.rec-price {
+    font-size: 16px;
+    color: var(--dark-text);
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.rec-name {
+    font-size: 13px;
+    color: #606060;
+    line-height: 1.4;
+    height: 36px;
+    overflow: hidden;
+}

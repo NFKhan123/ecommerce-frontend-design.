@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Commerce Site - All Products</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-top">
+            <div class="container header-top-layout">
+                <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                    <img src="pictures/logo-colored.png" alt="logo brand" onerror="this.style.display='none'; this.after('BrandLogo')">
+                </div>
+                
+                <form class="search-container" id="searchForm">
+                    <input type="text" id="searchInput" placeholder="Search">
+                    <select>
+                        <option>All category</option>
+                    </select>
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
+                
+                <div class="user-menu">
+                    <div class="menu-item" onclick="window.location.href='index.html'"><i class="fa-regular fa-user"></i><span>Home</span></div>
+                    <div class="menu-item"><i class="fa-regular fa-comment-dots"></i><span>Message</span></div>
+                    <div class="menu-item"><i class="fa-regular fa-heart"></i><span>Orders</span></div>
+                    <div class="menu-item" id="cartBtn">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>My cart (<span id="cartCount">0</span>)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="header-bottom">
+            <div class="container header-bottom-layout">
+                <div class="nav-left">
+                    <a href="products.html" class="all-cat-btn"><i class="fa-solid fa-bars"></i> All category</a>
+                    <a href="#">Hot offers</a>
+                    <a href="#">Gift boxes</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Menu item</a>
+                    <a href="#">Help</a>
+                </div>
+                <div class="nav-right">
+                    <span>English, USD <i class="fa-solid fa-chevron-down"></i></span>
+                    <span>Ship to <img src="https://flagcdn.com/16x12/de.png" alt="DE Flag" style="margin-left: 5px; vertical-align: middle;"> <i class="fa-solid fa-chevron-down"></i></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container catalog-layout-wrapper">
+        
+        <aside class="filter-sidebar">
+            <div class="filter-group">
+                <h4>Category</h4>
+                <a href="#" class="active-filter">Electronics</a>
+                <a href="#">Mobile accessory</a>
+                <a href="#">Computers</a>
+                <a href="#">Smart Home</a>
+            </div>
+
+            <div class="filter-group">
+                <h4>Brands</h4>
+                <label><input type="checkbox" checked> Samsung</label>
+                <label><input type="checkbox"> Apple</label>
+                <label><input type="checkbox"> Huawei</label>
+                <label><input type="checkbox"> Sony</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Features</h4>
+                <label><input type="checkbox"> Metallic</label>
+                <label><input type="checkbox" checked> Plastic cover</label>
+                <label><input type="checkbox"> 8GB RAM</label>
+                <label><input type="checkbox"> Super AMOLED</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Price range</h4>
+                <div class="price-input-row">
+                    <input type="number" placeholder="0">
+                    <input type="number" placeholder="9999">
+                </div>
+                <button class="btn-apply-filter">Apply</button>
+            </div>
+        </aside>
+
+        <section class="catalog-content-side">
+            
+            <div class="sorting-header-bar">
+                <p>Items found: <span style="font-weight: bold;">6 products</span></p>
+                <select class="sort-select">
+                    <option>Featured items</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                </select>
+            </div>
+
+            <div class="catalog-product-grid">
+                
+                <div class="product-card" onclick="window.location.href='product-detail.html'">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=240&auto=format&fit=crop&q=80" alt="Product">
+                    </div>
+                    <div class="card-info">
+                        <h4 class="product-price">$99.00</h4>
+                        <p class="product-name">GoPro camera 4K Ultra HD Professional Action Cam</p>
+                        <button class="btn-primary card-btn">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product-detail.html'">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=240&auto=format&fit=crop&q=80" alt="Product">
+                    </div>
+                    <div class="card-info">
+                        <h4 class="product-price">$120.00</h4>
+                        <p class="product-name">Wireless Noise Cancelling Headphones High-Bass</p>
+                        <button class="btn-primary card-btn">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product-detail.html'">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=240&auto=format&fit=crop&q=80" alt="Product">
+                    </div>
+                    <div class="card-info">
+                        <h4 class="product-price">$45.00</h4>
+                        <p class="product-name">Smart Fitness Watch Series 5 Active Tracking</p>
+                        <button class="btn-primary card-btn">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product-detail.html'">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=240&auto=format&fit=crop&q=80" alt="Product">
+                    </div>
+                    <div class="card-info">
+                        <h4 class="product-price">$15.50</h4>
+                        <p class="product-name">Unisex Metallic Sunglasses Minimalist UV Protection</p>
+                        <button class="btn-primary card-btn">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product-detail.html'">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=240&auto=format&fit=crop&q=80" alt="Product">
+                    </div>
+                    <div class="card-info">
+                        <h4 class="product-price">$699.00</h4>
+                        <p class="product-name">Slim Ultrabook Laptop Intel i7 16GB RAM SSD</p>
+                        <button class="btn-primary card-btn">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product-detail.html'">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=240&auto=format&fit=crop&q=80" alt="Product">
+                    </div>
+                    <div class="card-info">
+                        <h4 class="product-price">$29.00</h4>
+                        <p class="product-name">Over-Ear Bluetooth Headset Comfort Cushion</p>
+                        <button class="btn-primary card-btn">Buy Now</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pagination-container">
+                <button class="btn-pagination">Load more items</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-layout">
+            <div class="footer-col">
+                <div>
+                    <img src="pictures/logo-colored.png" alt="logo brand" onerror="this.style.display='none'; this.after('BrandLogo')">
+                </div>
+                <p style="margin-top: 15px;">Best marketplace for theme developers and designers.</p>
+            </div>
+            <div class="footer-col">
+                <h4>About</h4>
+                <a href="#">About Us</a><a href="#">Find store</a><a href="#">Categories</a><a href="#">Blogs</a>
+            </div>
+            <div class="footer-col">
+                <h4>Partnership</h4>
+                <a href="#">About Us</a><a href="#">Find store</a><a href="#">Categories</a><a href="#">Blogs</a>
+            </div>
+            <div class="footer-col">
+                <h4>Information</h4>
+                <a href="#">Help Center</a><a href="#">Money Refund </a><a href="#">Shipping</a><a href="#">Contact Us</a>
+            </div>
+            <div class="footer-col">
+                <h4>For users</h4>
+                <a href="#">Login</a><a href="#">Register</a><a href="#">Settings</a><a href="#">My Orders</a>
+            </div>
+        </div>
+    </footer>   
+
+    <div class="sub-footer">
+        <div class="container sub-footer-layout">
+            <p class="copyright">© 2026 Ecommerce.</p>
+            <div class="nav-right">
+                <div class="dropdown-container">
+                    <span class="dropdown-trigger">
+                        <img src="https://flagcdn.com/16x12/us.png" alt="US Flag" style="margin-right: 5px; vertical-align: middle;"> English, USD
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

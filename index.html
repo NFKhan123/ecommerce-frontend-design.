@@ -3,46 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-Commerce Site</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>e-Commerce Site - Home</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- GLOBAL HEADER LAYER -->
     <header class="site-header">
-        
         <div class="header-top">
             <div class="container header-top-layout">
-                
-                <div >
-                    <img src="pictures/logo-colored.png" alt="logo brand">
+                <div class="logo">
+                    <img src="pictures/logo-colored.png" alt="logo brand" onerror="this.style.display='none'; this.after('BrandLogo')">
                 </div>
                 
                 <form class="search-container" id="searchForm">
-    <input type="text" id="searchInput" placeholder="Search">
-    <select>
-        <option>All category</option>
-    </select>
-    <button type="submit" class="search-btn">Search</button>
-</form>
+                    <input type="text" id="searchInput" placeholder="Search">
+                    <select>
+                        <option>All category</option>
+                    </select>
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
                 
                 <div class="user-menu">
-    <div class="menu-item"><i class="fa-regular fa-user"></i><span>Profile</span></div>
-    <div class="menu-item"><i class="fa-regular fa-comment-dots"></i><span>Message</span></div>
-    <div class="menu-item"><i class="fa-regular fa-heart"></i><span>Orders</span></div>
-    <div class="menu-item" id="cartBtn">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span>My cart (<span id="cartCount">0</span>)</span>
-    </div>
-</div>
-
+                    <div class="menu-item"><i class="fa-regular fa-user"></i><span>Profile</span></div>
+                    <div class="menu-item"><i class="fa-regular fa-comment-dots"></i><span>Message</span></div>
+                    <div class="menu-item" onclick="window.location.href='products.html'"><i class="fa-regular fa-heart"></i><span>Products</span></div>
+                    <div class="menu-item" id="cartBtn">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>My cart (<span id="cartCount">0</span>)</span>
+                    </div>
+                </div>
             </div>
+        </div>
 
         <nav class="header-bottom">
             <div class="container header-bottom-layout">
                 <div class="nav-left">
-                    <a href="#" class="all-cat-btn"><i class="fa-solid fa-bars"></i> All category</a>
-                    <a href="#">Hot offers</a>
+                    <a href="products.html" class="all-cat-btn"><i class="fa-solid fa-bars"></i> All category</a>
+                    <a href="products.html">Hot offers</a>
                     <a href="#">Gift boxes</a>
                     <a href="#">Projects</a>
                     <a href="#">Menu item</a>
@@ -50,22 +50,182 @@
                 </div>
                 <div class="nav-right">
                     <span>English, USD <i class="fa-solid fa-chevron-down"></i></span>
-                    <span>Ship to <img src="https://flagcdn.com/16x12/de.png" alt="DE Flag" style="margin-left: 5px; vertical-align: middle;"> <i class="fa-solid fa-chevron-down"></i></span>
+                    <span id="shipDropdownBtn" style="position: relative;">Ship to <img src="https://flagcdn.com/16x12/de.png" alt="DE Flag" style="margin-left: 5px; vertical-align: middle;"> <i class="fa-solid fa-chevron-down"></i></span>
                 </div>
             </div>
         </nav>
-
     </header>
 
-    <main style="min-height: 50vh; background-color:#F7FAFC; padding: 40px;"></main>
+    <!-- CONTENT WRAPPER CANVAS -->
+    <main class="container" style="min-height: 60vh; padding: 20px 0; display: flex; flex-direction: column; gap: 30px;">
+        
+        <!-- SECTION 1: HERO BANNER SECTION -->
+        <section class="hero-banner">
+            <div class="hero-sidebar">
+                <a href="#" class="active">Automobiles</a>
+                <a href="#">Clothes and wear</a>
+                <a href="#">Home interiors</a>
+                <a href="#">Computer and tech</a>
+                <a href="#">Tools, machinery</a>
+                <a href="#">Sports and outdoor</a>
+            </div>
+            <div class="hero-main-content">
+                <h3>Latest trending</h3>
+                <h1>Electronic items</h1>
+                <button class="btn-primary" onclick="window.location.href='products.html'">Source now</button>
+            </div>
+        </section>
 
+        <!-- SECTION 2: DEALS OF THE DAY WITH TIMER -->
+        <section class="deals-section">
+            <div class="deals-countdown-box">
+                <div>
+                    <h2>Deals and offers</h2>
+                    <p>Hygiene equipments</p>
+                </div>
+                <!-- Dynamic Script Driven Countdown Timer Blocks -->
+                <div class="timer-container">
+                    <div class="timer-block"><span id="daysBox">04</span><small>Days</small></div>
+                    <div class="timer-block"><span id="hoursBox">13</span><small>Hour</small></div>
+                    <div class="timer-block"><span id="minsBox">02</span><small>Min</small></div>
+                    <div class="timer-block"><span id="secsBox">56</span><small>Sec</small></div>
+                </div>
+            </div>
+            
+            <div class="deals-products-wrapper">
+                <!-- Deal Product Item 1 -->
+                <div class="deal-item" onclick="window.location.href='product-detail.html'">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=130&auto=format&fit=crop&q=60" alt="Gadget">
+                    <h5>Smartphones</h5>
+                    <span class="discount-badge">-25%</span>
+                </div>
+                <!-- Deal Product Item 2 -->
+                <div class="deal-item" onclick="window.location.href='product-detail.html'">
+                    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=130&auto=format&fit=crop&q=60" alt="Tech">
+                    <h5>Smart Watches</h5>
+                    <span class="discount-badge">-15%</span>
+                </div>
+                <!-- Deal Product Item 3 -->
+                <div class="deal-item" onclick="window.location.href='product-detail.html'">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=130&auto=format&fit=crop&q=60" alt="Camera">
+                    <h5>Cameras</h5>
+                    <span class="discount-badge">-40%</span>
+                </div>
+                <!-- Deal Product Item 4 -->
+                <div class="deal-item" onclick="window.location.href='product-detail.html'">
+                    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=130&auto=format&fit=crop&q=60" alt="Headphones">
+                    <h5>Headphones</h5>
+                    <span class="discount-badge">-20%</span>
+                </div>
+                <!-- Deal Product Item 5 -->
+                <div class="deal-item" onclick="window.location.href='product-detail.html'">
+                    <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=130&auto=format&fit=crop&q=60" alt="Laptops">
+                    <h5>Laptops</h5>
+                    <span class="discount-badge">-10%</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: HOME AND INTERIOR CATEGORY BLOCK -->
+        <section class="category-block">
+            <div class="category-banner-side">
+                <h2>Home and interior</h2>
+                <button class="btn-secondary-white" onclick="window.location.href='products.html'">Source now</button>
+            </div>
+            
+            <div class="category-grid-side">
+                <!-- Grid Cell Item 1 -->
+                <div class="cat-cell" onclick="window.location.href='products.html'">
+                    <div class="cat-cell-info"><h5>Soft chairs</h5><small>From <br>USD 19</small></div>
+                    <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=100&auto=format&fit=crop&q=60" alt="Item">
+                </div>
+                <!-- Grid Cell Item 2 -->
+                <div class="cat-cell" onclick="window.location.href='products.html'">
+                    <div class="cat-cell-info"><h5>Sofa Sets</h5><small>From <br>USD 99</small></div>
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=100&auto=format&fit=crop&q=60" alt="Item">
+                </div>
+                <!-- Grid Cell Item 3 -->
+                <div class="cat-cell" onclick="window.location.href='products.html'">
+                    <div class="cat-cell-info"><h5>Kitchen mixer</h5><small>From <br>USD 39</small></div>
+                    <img src="https://images.unsplash.com/photo-1578643463396-0997cb5328c1?w=100&auto=format&fit=crop&q=60" alt="Item">
+                </div>
+                <!-- Grid Cell Item 4 -->
+                <div class="cat-cell" onclick="window.location.href='products.html'">
+                    <div class="cat-cell-info"><h5>Smart Blenders</h5><small>From <br>USD 24</small></div>
+                    <img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=100&auto=format&fit=crop&q=60" alt="Item">
+                </div>
+                <!-- Grid Cell Item 5 -->
+                <div class="cat-cell" onclick="window.location.href='products.html'">
+                    <div class="cat-cell-info"><h5>Home Textiles</h5><small>From <br>USD 12</small></div>
+                    <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=100&auto=format&fit=crop&q=60" alt="Item">
+                </div>
+                <!-- Grid Cell Item 6 -->
+                <div class="cat-cell" onclick="window.location.href='products.html'">
+                    <div class="cat-cell-info"><h5>Wooden Craft</h5><small>From <br>USD 15</small></div>
+                    <img src="https://images.unsplash.com/photo-1532372320978-9b4d7a92b24d?w=100&auto=format&fit=crop&q=60" alt="Item">
+                </div>
+                <!-- Grid Cell Item 7 -->
+                <div class="cat-cell" onclick="window.location.href='products.html'">
+                    <div class="cat-cell-info"><h5>Bedding Sets</h5><small>From <br>USD 40</small></div>
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=100&auto=format&fit=crop&q=60" alt="Item">
+                </div>
+                <!-- Grid Cell Item 8 -->
+                <div class="cat-cell" onclick="window.location.href='products.html'">
+                    <div class="cat-cell-info"><h5>Storage boxes</h5><small>From <br>USD 9</small></div>
+                    <img src="https://images.unsplash.com/photo-1594409945110-388f6bc20ff2?w=100&auto=format&fit=crop&q=60" alt="Item">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: RECOMMENDED PRODUCTS SECTION -->
+        <section class="recommended-section">
+            <h3 class="rec-title">Recommended items</h3>
+            <div class="recommended-5-col-grid">
+                
+                <!-- Rec Card 1 -->
+                <div class="rec-card" onclick="window.location.href='product-detail.html'">
+                    <div class="rec-img-holder"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=180&auto=format&fit=crop&q=60" alt="item"></div>
+                    <h4 class="rec-price">$10.30</h4>
+                    <p class="rec-name">T-Shirts with multiple options for men</p>
+                </div>
+                <!-- Rec Card 2 -->
+                <div class="rec-card" onclick="window.location.href='product-detail.html'">
+                    <div class="rec-img-holder"><img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=180&auto=format&fit=crop&q=60" alt="item"></div>
+                    <h4 class="rec-price">$34.00</h4>
+                    <p class="rec-name">Winter Leather jackets for fashion</p>
+                </div>
+                <!-- Rec Card 3 -->
+                <div class="rec-card" onclick="window.location.href='product-detail.html'">
+                    <div class="rec-img-holder"><img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=180&auto=format&fit=crop&q=60" alt="item"></div>
+                    <h4 class="rec-price">$12.50</h4>
+                    <p class="rec-name">Jeans shorts for summer sports wear</p>
+                </div>
+                <!-- Rec Card 4 -->
+                <div class="rec-card" onclick="window.location.href='product-detail.html'">
+                    <div class="rec-img-holder"><img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?w=180&auto=format&fit=crop&q=60" alt="item"></div>
+                    <h4 class="rec-price">$180.00</h4>
+                    <p class="rec-name">Professional Travel Leather Bag suitcase</p>
+                </div>
+                <!-- Rec Card 5 -->
+                <div class="rec-card" onclick="window.location.href='product-detail.html'">
+                    <div class="rec-img-holder"><img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=180&auto=format&fit=crop&q=60" alt="item"></div>
+                    <h4 class="rec-price">$9.99</h4>
+                    <p class="rec-name">Orange Cotton Polo shirt for casual wear</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- GLOBAL FOOTER LAYER -->
     <footer class="site-footer">
         <div class="container footer-layout">
             <div class="footer-col">
-                <div>
-                    <img src="pictures/logo-colored.png" alt="logo brand">
+                <div class="logo-footer">
+                    <img src="pictures/logo-colored.png" alt="logo brand" onerror="this.style.display='none'; this.after('BrandLogo')">
                 </div>
-                <p>Best marketplace for theme developers and designers.</p>
+                <p style="margin-top: 15px;">Best marketplace for theme developers and designers.</p>
             </div>
             <div class="footer-col">
                 <h4>About</h4>
@@ -83,17 +243,12 @@
                 <h4>For users</h4>
                 <a href="#">Login</a><a href="#">Register</a><a href="#">Settings</a><a href="#">My Orders</a>
             </div>
-            <div class="footer-col">
-                <h4>Get App</h4>
-                <img src="pictures/market-button.png" alt="App Store">
-                <img src="pictures/Group.png" alt="Google Play">
-            </div>
         </div>
-</footer>   
+    </footer>   
 
-<div class="sub-footer">
+    <div class="sub-footer">
         <div class="container sub-footer-layout">
-            <p class="copyright">© 2023 Ecommerce.</p>
+            <p class="copyright">© 2026 Ecommerce.</p>
             <div class="nav-right">
                 <div class="dropdown-container">
                     <span class="dropdown-trigger">
@@ -103,6 +258,7 @@
             </div>
         </div>
     </div>
-<script src="script.js"></script>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

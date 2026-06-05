@@ -1,0 +1,225 @@
+/* --- LAYOUT WRAPPER (Sidebar on Left, Catalog Content on Right) --- */
+.catalog-layout-wrapper {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+    align-items: flex-start;
+}
+
+/* --- FEATURE 1: SIDEBAR FILTER STYLING --- */
+.filter-sidebar {
+    width: 240px;
+    flex-shrink: 0;
+}
+
+.filter-group {
+    border-top: 1px solid var(--border-color);
+    padding: 15px 0;
+}
+
+.filter-group:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.filter-group h4 {
+    font-size: 16px;
+    color: var(--dark-text);
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.filter-group a {
+    display: block;
+    text-decoration: none;
+    color: #505050;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.filter-group a.active-filter, .filter-group a:hover {
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+.filter-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #1c1c1c;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.filter-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Price Range Custom Inputs */
+.price-input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.price-input-row input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+}
+
+.btn-apply-filter {
+    width: 100%;
+    background-color: #ffffff;
+    color: var(--primary-blue);
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: background 0.2s ease;
+}
+
+.btn-apply-filter:hover {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    border-color: var(--primary-blue);
+}
+
+/* --- FEATURE 2: CATALOG CONTENT SIDE --- */
+.catalog-content-side {
+    flex: 1;
+}
+
+/* Utility Header Bar */
+.sorting-header-bar {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sorting-header-bar p {
+    font-size: 14px;
+    color: var(--dark-text);
+}
+
+.sort-select {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Grid Layout Definition (3-Columns on Desktop View) */
+.catalog-product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Individual Product Cards Custom Refinements */
+.product-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+}
+
+.card-img {
+    background-color: #ffffff;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.card-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .card-img img {
+    transform: scale(1.03);
+}
+
+.card-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.product-price {
+    color: var(--dark-text);
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.product-name {
+    color: #505050;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.card-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Pagination Container */
+.pagination-container {
+    text-align: right;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.btn-pagination {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    color: var(--dark-text);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-pagination:hover {
+    background-color: #f7f7f7;
+    border-color: #bdc3c7;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Commerce Site - Product Details</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-top">
+            <div class="container header-top-layout">
+                <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                    <img src="pictures/logo-colored.png" alt="logo brand" onerror="this.style.display='none'; this.after('BrandLogo')">
+                </div>
+                
+                <form class="search-container" id="searchForm">
+                    <input type="text" id="searchInput" placeholder="Search">
+                    <select>
+                        <option>All category</option>
+                    </select>
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
+                
+                <div class="user-menu">
+                    <div class="menu-item" onclick="window.location.href='index.html'"><i class="fa-regular fa-user"></i><span>Home</span></div>
+                    <div class="menu-item" onclick="window.location.href='products.html'"><i class="fa-regular fa-comment-dots"></i><span>Shop</span></div>
+                    <div class="menu-item"><i class="fa-regular fa-heart"></i><span>Orders</span></div>
+                    <div class="menu-item" id="cartBtn">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>My cart (<span id="cartCount">0</span>)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="header-bottom">
+            <div class="container header-bottom-layout">
+                <div class="nav-left">
+                    <a href="products.html" class="all-cat-btn"><i class="fa-solid fa-bars"></i> All category</a>
+                    <a href="#">Hot offers</a>
+                    <a href="#">Gift boxes</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Menu item</a>
+                    <a href="#">Help</a>
+                </div>
+                <div class="nav-right">
+                    <span>English, USD <i class="fa-solid fa-chevron-down"></i></span>
+                    <span>Ship to <img src="https://flagcdn.com/16x12/de.png" alt="DE Flag" style="margin-left: 5px; vertical-align: middle;"> <i class="fa-solid fa-chevron-down"></i></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container" style="padding: 20px 0;">
+        
+        <div class="detail-container">
+            <div class="gallery-wrapper">
+                <div class="detail-gallery">
+                    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400&auto=format&fit=crop&q=80" id="mainDetailImage" alt="Main Product View">
+                </div>
+                <div class="thumb-strip">
+                    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=100&auto=format&fit=crop&q=80" class="thumb-img active-thumb" onclick="switchGalleryImage(this.src)">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&auto=format&fit=crop&q=80" class="thumb-img" onclick="switchGalleryImage(this.src)">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=100&auto=format&fit=crop&q=80" class="thumb-img" onclick="switchGalleryImage(this.src)">
+                    <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=100&auto=format&fit=crop&q=80" class="thumb-img" onclick="switchGalleryImage(this.src)">
+                </div>
+            </div>
+            
+            <div class="detail-specs">
+                <span class="stock-status" style="color: #00b517; font-weight: bold;"><i class="fa-solid fa-check"></i> In Stock</span>
+                <h1 style="margin: 10px 0; color: var(--dark-text); font-size: 24px;">GoPro camera 4K Ultra HD Professional Action Cam</h1>
+                
+                <div class="rating-row">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+                    <span>4.5 rating</span>
+                    <span class="bullet-sep">•</span>
+                    <span><i class="fa-solid fa-message"></i> 32 reviews</span>
+                </div>
+
+                <h2 class="detail-price">$99.00</h2>
+                <p class="detail-desc">Experience incredible detail recording capabilities under extreme circumstances. Engineered for sport activities, underwater exploration, and high-motion action capture sequences.</p>
+                
+                <div class="selector-group">
+                    <label>Select Configuration Size:</label>
+                    <select class="custom-select">
+                        <option>Standard Edition</option>
+                        <option>Pro Bundle (+ $20)</option>
+                        <option>Extreme Creator Kit (+ $50)</option>
+                    </select>
+                </div>
+
+                <button class="btn-primary" id="addToCartMainBtn" style="padding: 12px 35px; font-size: 16px;">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="tabs-wrapper-block">
+            <div class="tab-headers">
+                <button class="tab-link active" onclick="switchTab(event, 'descriptionTab')">Description</button>
+                <button class="tab-link" onclick="switchTab(event, 'specsTab')">Specifications</button>
+                <button class="tab-link" onclick="switchTab(event, 'reviewsTab')">Reviews (3)</button>
+            </div>
+
+            <div id="descriptionTab" class="tab-content active-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin elementum ligula non felis elementum, non pretium elit accumsan. Quisque eleifend ligula id turpis varius feugiat. Aliquam id convallis eros. Ut fringilla tempor magna non varius. Morbi hendrerit eleifend augue, ac molestie erat scelerisque sit amet.</p>
+            </div>
+
+            <div id="specsTab" class="tab-content">
+                <table class="specs-table">
+                    <tr><td>Video Resolution</td><td>4K Ultra HD at 60fps</td></tr>
+                    <tr><td>Sensor Technology</td><td>CMOS 12 Megapixel</td></tr>
+                    <tr><td>Waterproof Depth</td><td>Up to 10 meters natively</td></tr>
+                    <tr><td>Connectivity</td><td>Wi-Fi, Bluetooth, USB-C</td></tr>
+                </table>
+            </div>
+
+            <div id="reviewsTab" class="tab-content">
+                <div class="review-item">
+                    <div class="review-user"><strong>Ali Khan</strong> <span class="review-stars">⭐⭐⭐⭐⭐</span></div>
+                    <p>Amazing camera setup! Used it during my swimming trials and the output video stabilization is absolutely stellar.</p>
+                </div>
+                <div class="review-item">
+                    <div class="review-user"><strong>Sana Ahmed</strong> <span class="review-stars">⭐⭐⭐⭐</span></div>
+                    <p>Battery backup could be slightly better, but the 4K clear focus quality more than compensates for it. Worth the buy.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-layout">
+            <div class="footer-col">
+                <div>
+                    <img src="pictures/logo-colored.png" alt="logo brand" onerror="this.style.display='none'; this.after('BrandLogo')">
+                </div>
+                <p style="margin-top: 15px;">Best marketplace for theme developers and designers.</p>
+            </div>
+            <div class="footer-col">
+                <h4>About</h4>
+                <a href="#">About Us</a><a href="#">Find store</a><a href="#">Categories</a><a href="#">Blogs</a>
+            </div>
+            <div class="footer-col">
+                <h4>Partnership</h4>
+                <a href="#">About Us</a><a href="#">Find store</a><a href="#">Categories</a><a href="#">Blogs</a>
+            </div>
+            <div class="footer-col">
+                <h4>Information</h4>
+                <a href="#">Help Center</a><a href="#">Money Refund </a><a href="#">Shipping</a><a href="#">Contact Us</a>
+            </div>
+            <div class="footer-col">
+                <h4>For users</h4>
+                <a href="#">Login</a><a href="#">Register</a><a href="#">Settings</a><a href="#">My Orders</a>
+            </div>
+        </div>
+    </footer>   
+
+    <div class="sub-footer">
+        <div class="container sub-footer-layout">
+            <p class="copyright">© 2026 Ecommerce.</p>
+            <div class="nav-right">
+                <div class="dropdown-container">
+                    <span class="dropdown-trigger">
+                        <img src="https://flagcdn.com/16x12/us.png" alt="US Flag" style="margin-right: 5px; vertical-align: middle;"> English, USD
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
